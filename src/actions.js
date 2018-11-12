@@ -7,7 +7,7 @@ export const loaded = () => ({ type: "LOADED" });
 export const loadTodos = () => dispatch => {
     dispatch(loading());
     setTimeout(() => {
-        fetch("http://127.0.0.1:8080/todos.json")
+        fetch("http://192.168.33.10:8080/todos.json")
             .then(res => res.json())
             .then(json => {
                 dispatch(setTasks(json.tasks));
